@@ -1,0 +1,166 @@
+[
+  {
+    "name": "Classic Ribbon Cake",
+    "category": "Birthday",
+    "image": "",
+    "featured": true,
+    "description": "Soft layers of vanilla, chocolate and pink sponge with light butter cream. A Sri Lankan favourite for every celebration.",
+    "sizes": [
+      {
+        "label": "1 kg",
+        "price": 3800
+      },
+      {
+        "label": "2 kg",
+        "price": 7200
+      }
+    ],
+    "flavours": [
+      "Vanilla"
+    ]
+  },
+  {
+    "name": "Chocolate Fudge Cake",
+    "category": "Chocolate",
+    "image": "",
+    "featured": true,
+    "description": "Moist chocolate sponge, rich fudge filling and a smooth ganache coat.",
+    "sizes": [
+      {
+        "label": "1 kg",
+        "price": 4200
+      },
+      {
+        "label": "2 kg",
+        "price": 8000
+      },
+      {
+        "label": "3 kg",
+        "price": 11500
+      }
+    ],
+    "flavours": [
+      "Dark chocolate",
+      "Milk chocolate"
+    ]
+  },
+  {
+    "name": "Strawberry Cream Cake",
+    "category": "Birthday",
+    "image": "",
+    "featured": true,
+    "description": "Light vanilla sponge with fresh whipped cream and strawberry compote.",
+    "sizes": [
+      {
+        "label": "1 kg",
+        "price": 4500
+      },
+      {
+        "label": "2 kg",
+        "price": 8600
+      }
+    ],
+    "flavours": [
+      "Strawberry",
+      "Vanilla"
+    ]
+  },
+  {
+    "name": "Baked Cheesecake",
+    "category": "Cheesecake",
+    "image": "",
+    "featured": true,
+    "description": "Creamy baked cheesecake on a buttery biscuit base. Served chilled.",
+    "sizes": [
+      {
+        "label": "8 slices",
+        "price": 5200
+      },
+      {
+        "label": "12 slices",
+        "price": 7400
+      }
+    ],
+    "flavours": [
+      "Plain",
+      "Blueberry",
+      "Passion fruit"
+    ]
+  },
+  {
+    "name": "Butterscotch Cake",
+    "category": "Birthday",
+    "image": "",
+    "description": "Butterscotch sponge with caramel crunch and a golden glaze.",
+    "sizes": [
+      {
+        "label": "1 kg",
+        "price": 4000
+      },
+      {
+        "label": "2 kg",
+        "price": 7700
+      }
+    ],
+    "flavours": [
+      "Butterscotch"
+    ]
+  },
+  {
+    "name": "Cupcake Box",
+    "category": "Cupcakes",
+    "image": "",
+    "description": "Hand-piped cupcakes in a gift box. One flavour per box.",
+    "sizes": [
+      {
+        "label": "Box of 6",
+        "price": 2400
+      },
+      {
+        "label": "Box of 12",
+        "price": 4600
+      }
+    ],
+    "flavours": [
+      "Vanilla",
+      "Chocolate",
+      "Strawberry"
+    ]
+  },
+  {
+    "name": "Wedding Tier Cake",
+    "category": "Wedding",
+    "image": "",
+    "description": "Two-tier fruit or butter cake finished in smooth white icing. Please order at least 5 days ahead.",
+    "sizes": [
+      {
+        "label": "4 kg",
+        "price": 22000
+      },
+      {
+        "label": "6 kg",
+        "price": 32000
+      }
+    ],
+    "flavours": [
+      "Rich fruit",
+      "Butter",
+      "Chocolate"
+    ]
+  },
+  {
+    "name": "Lemon Drizzle Loaf",
+    "category": "Tea time",
+    "image": "",
+    "description": "A bright, tangy loaf cake with lemon glaze. Good with a cup of tea.",
+    "sizes": [
+      {
+        "label": "Loaf",
+        "price": 1800
+      }
+    ],
+    "flavours": [
+      "Lemon"
+    ]
+  }
+]
