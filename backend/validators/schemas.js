@@ -1,3 +1,4 @@
+
 import Joi from 'joi';
 
 const objectId = () => Joi.string().hex().length(24);
@@ -15,8 +16,13 @@ export const loginSchema = Joi.object({
   password: Joi.string().required().label('Password'),
 });
 
-export const forgotSchema = Joi.object({ email: Joi.string().trim().email().required().label('Email') });
-export const resetSchema = Joi.object({ password: Joi.string().min(6).max(72).required().label('Password') });
+export const forgotSchema = Joi.object({
+  email: Joi.string().trim().email().required().label('Email')
+});
+
+export const resetSchema = Joi.object({
+  password: Joi.string().min(6).max(72).required().label('Password')
+});
 
 export const profileSchema = Joi.object({
   name: Joi.string().trim().min(2).max(60).required().label('Name'),
@@ -41,7 +47,12 @@ export const productSchema = Joi.object({
   image: Joi.string().allow('').max(500).label('Photo'),
   sizes: Joi.array()
     .min(1)
-    .items(Joi.object({ label: Joi.string().trim().required().label('Size label'), price: Joi.number().positive().required().label('Price') }))
+    .items(
+      Joi.object({
+        label: Joi.string().trim().required().label('Size label'),
+        price: Joi.number().positive().required().label('Price')
+      })
+    )
     .required()
     .label('Sizes'),
   flavours: Joi.array().items(Joi.string().trim().max(40)).label('Flavours'),
@@ -51,7 +62,7 @@ export const productSchema = Joi.object({
 
 export const reviewSchema = Joi.object({
   rating: Joi.number().integer().min(1).max(5).required().label('Rating'),
-  comment: Joi.string().trim().allow('').max(500).label('Comment'),
+  comment: Joi.string().trim().allow('').min(3).max(500).label('Comment'),
 });
 
 export const orderSchema = Joi.object({

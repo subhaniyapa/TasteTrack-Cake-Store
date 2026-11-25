@@ -1,8 +1,8 @@
+
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validate } from '../middleware/validate.js';
 import { registerSchema, orderSchema, reviewSchema, productSchema } from '../validators/schemas.js';
-
 
 const run = (schema, body) =>
   new Promise((resolve) => {
@@ -47,4 +47,17 @@ test('cake needs at least one size with a positive price', async () => {
   assert.equal((await run(productSchema, cake)).error, undefined);
   assert.match((await run(productSchema, { ...cake, sizes: [] })).error, /Sizes/);
   assert.match((await run(productSchema, { ...cake, sizes: [{ label: '1 kg', price: -5 }] })).error, /Price/);
+});
+
+test('review rating rejects values outside the allowed range', async () => {
+  assert.match((await run(reviewSchema, { rating: 0 })).error, /Rating/);
+  assert.match((await run(reviewSchema, { rating: 6 })).error, /Rating/);
+  assert.match((await run(reviewSchema, { rating: 4.5 })).error, /Rating/);
+  assert.match((await run(reviewSchema, {})).error, /Rating/);
+});
+
+test('review comment must contain at least 3 characters when provided', async () => {
+  assert.equal((await run(reviewSchema, { rating: 5, comment: '' })).error, undefined);
+  assert.match((await run(reviewSchema, { rating: 5, comment: 'Hi' })).error, /Comment/);
+  assert.equal((await run(reviewSchema, { rating: 5, comment: 'Good' })).error, undefined);
 });
